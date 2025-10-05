@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://0s5wa3uhtu0d"]
+
+[ext_resource type="Script" uid="uid://dttu6n24f44jd" path="res://scripts/candles/black_candle.gd" id="1_6v2vr"]
+
+[node name="BlackCandle" type="Node2D"]
+script = ExtResource("1_6v2vr")
+metadata/_custom_type_script = "uid://dcvbt6t8m8eix"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://030i4h8n0arp"]
+
+[ext_resource type="BitMap" uid="uid://baqc5ypp6fuab" path="res://sprites/white_candle_bitmap.png" id="1_fk58c"]
+[ext_resource type="Script" uid="uid://ve4o822qrnsd" path="res://scripts/utils/candle_hitbox.gd" id="2_81eqc"]
+
+[node name="CandleHitbox" type="TextureButton"]
+texture_click_mask = ExtResource("1_fk58c")
+script = ExtResource("2_81eqc")
+
+[connection signal="button_down" from="." to="." method="_on_pressed"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

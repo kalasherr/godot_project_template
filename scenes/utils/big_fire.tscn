@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cireyhfgyfjyx"]
+
+[ext_resource type="Texture2D" uid="uid://c1om13vpjglwf" path="res://sprites/small_fire.png" id="1_kllt3"]
+
+[sub_resource type="Gradient" id="Gradient_kllt3"]
+offsets = PackedFloat32Array(0, 0.251908, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.938931, 0.938931, 0.938931, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oai67"]
+gradient = SubResource("Gradient_kllt3")
+width = 640
+height = 640
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.871795, 0.17094)
+
+[node name="BigFire" type="Sprite2D"]
+texture = ExtResource("1_kllt3")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-2, 4.99999)
+energy = 0.8
+range_item_cull_mask = 5
+texture = SubResource("GradientTexture2D_oai67")
+texture_scale = 2.0

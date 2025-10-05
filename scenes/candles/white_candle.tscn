@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvamoy2oo4gwl"]
+
+[ext_resource type="Script" uid="uid://dstyaafvbnb8x" path="res://scripts/candles/white_candle.gd" id="1_7rs6d"]
+
+[node name="WhiteCandle" type="Node2D"]
+script = ExtResource("1_7rs6d")
+metadata/_custom_type_script = "uid://dcvbt6t8m8eix"

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dulf3ytcgmw3m"]
+
+[ext_resource type="Script" uid="uid://bsljexq74qh0s" path="res://scripts/utils/candle_place.gd" id="1_gn8tl"]
+[ext_resource type="Texture2D" uid="uid://bhtbr6fe1ayty" path="res://sprites/candle_place.png" id="2_y6buo"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jg286"]
+polygon = PackedVector2Array(-103, -68, -46, -58, -34, -57, -6, -65, 8, -66, 32, -57, 118, -69, 146, -60, 148, -41, 138, -19, 116, -4, 92, 36, 69, 49, 56, 50, -56, 50, -89, 38, -104, 15, -111, 0, -144, -26, -148, -55, -132, -66)
+
+[node name="CandlePlace" type="Node2D"]
+script = ExtResource("1_gn8tl")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_jg286")
+
+[node name="CandlePlace" type="Sprite2D" parent="."]
+texture = ExtResource("2_y6buo")

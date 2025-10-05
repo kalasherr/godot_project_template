@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bffavmi5xkaur"]
+
+[ext_resource type="Script" uid="uid://dsnyc0xbtcctt" path="res://scripts/inventory.gd" id="1_qw0r6"]
+[ext_resource type="Texture2D" uid="uid://w1ltc1pjno6" path="res://sprites/inventory.png" id="2_hj2ta"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hj2ta"]
+polygon = PackedVector2Array(-234, 128, -248, 91, -248.5, 8, -245, -108, -249, -130, -229, -149, 239, -150, 251, -118, 249, 111, 227.5, 148, -201, 148)
+
+[sub_resource type="Gradient" id="Gradient_hj2ta"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ty45s"]
+gradient = SubResource("Gradient_hj2ta")
+fill = 1
+fill_from = Vector2(0.5, 1)
+fill_to = Vector2(0.957265, 0.102564)
+
+[node name="Inventory" type="Node2D"]
+script = ExtResource("1_qw0r6")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+light_mask = 8
+scale = Vector2(2, 1)
+texture = ExtResource("2_hj2ta")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+light_mask = 7
+visibility_layer = 7
+scale = Vector2(2, 1)
+occluder = SubResource("OccluderPolygon2D_hj2ta")
+
+[node name="Light" type="PointLight2D" parent="."]
+position = Vector2(-9.49998, 103.875)
+scale = Vector2(16.4219, 13.9648)
+energy = 2.0
+range_item_cull_mask = 9
+texture = SubResource("GradientTexture2D_ty45s")

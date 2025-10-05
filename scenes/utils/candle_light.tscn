@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceseqnm5s3uio"]
+
+[ext_resource type="Script" uid="uid://5pbxx44300eo" path="res://scripts/utils/candle_light.gd" id="1_bnefe"]
+
+[sub_resource type="Gradient" id="Gradient_tbtyu"]
+offsets = PackedFloat32Array(0, 0.00381679, 0.0229008, 0.942748, 0.996183, 1)
+colors = PackedColorArray(0.820611, 0.820611, 0.820611, 1, 0.820611, 0.820611, 0.820611, 1, 0.657983, 0.657983, 0.657983, 1, 0.646262, 0.646262, 0.646262, 1, 0.333183, 0.333183, 0.333183, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wlun0"]
+gradient = SubResource("Gradient_tbtyu")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.824786, 0.119658)
+
+[node name="CandleLight" type="PointLight2D"]
+color = Color(0.89, 0.89, 0.89, 1)
+energy = 1.5
+blend_mode = 2
+texture = SubResource("GradientTexture2D_wlun0")
+texture_scale = 2.0
+script = ExtResource("1_bnefe")

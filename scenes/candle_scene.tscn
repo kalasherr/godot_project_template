@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbtkawxwx725a"]
+
+[ext_resource type="Script" uid="uid://b6u81rg4yl1du" path="res://scripts/candle_scene.gd" id="1_ufnog"]
+[ext_resource type="Texture2D" uid="uid://bjbjg3gt8khmm" path="res://sprites/background.png" id="2_q72jx"]
+[ext_resource type="PackedScene" uid="uid://bffavmi5xkaur" path="res://scenes/inventory.tscn" id="3_6f0bk"]
+
+[sub_resource type="Gradient" id="Gradient_ufnog"]
+offsets = PackedFloat32Array(0, 0.225191, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.568702, 0.568702, 0.568702, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_q72jx"]
+gradient = SubResource("Gradient_ufnog")
+width = 20
+height = 400
+fill_to = Vector2(0, 1)
+
+[node name="CandleScene" type="Node2D"]
+script = ExtResource("1_ufnog")
+
+[node name="Places" type="Node2D" parent="."]
+
+[node name="Candles" type="Node2D" parent="."]
+
+[node name="Light" type="PointLight2D" parent="."]
+z_index = 1000
+position = Vector2(-590, 3.8147e-06)
+scale = Vector2(5.11667, 1.83)
+energy = 0.0
+blend_mode = 2
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_q72jx")
+
+[node name="Background" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = -100
+position = Vector2(702, 491)
+scale = Vector2(13.7833, 11.095)
+texture = ExtResource("2_q72jx")
+
+[node name="Inventory" parent="." instance=ExtResource("3_6f0bk")]
+position = Vector2(0, 171)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.182, 0.182, 0.28, 1)

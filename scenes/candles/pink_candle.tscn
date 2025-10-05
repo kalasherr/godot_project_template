@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://csvtes4sn6txh"]
+
+[ext_resource type="Script" uid="uid://cp2oama3elr2s" path="res://scripts/candles/pink_candle.gd" id="1_5ddb1"]
+
+[node name="PinkCandle" type="Node2D"]
+script = ExtResource("1_5ddb1")
+metadata/_custom_type_script = "uid://dcvbt6t8m8eix"

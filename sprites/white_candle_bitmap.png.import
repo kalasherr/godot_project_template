@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://baqc5ypp6fuab"
+path="res://.godot/imported/white_candle_bitmap.png-c9d21f9e82ec227a43f1fe2f9051316a.res"
+
+[deps]
+
+source_file="res://sprites/white_candle_bitmap.png"
+dest_files=["res://.godot/imported/white_candle_bitmap.png-c9d21f9e82ec227a43f1fe2f9051316a.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
